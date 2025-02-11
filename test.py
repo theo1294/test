@@ -656,28 +656,17 @@ logo=("""
    AUTO CREATE FACEBOOK ACCOUNT
 """)
 ll=str([hari,tanggal])
+ll=str([hari,tanggal])
 kk=str([xy,co])
-hx = f"""[bold green1]DEVELOPER[medium_purple1]   ⟩ [bold green1]BRYXPOGI
-[bold green1]FACEBOOK[medium_purple1]    ⟩ [bold green1]BRYX ANTON GRAYSON
-[bold green1]TOOL/STATUS[medium_purple1] ⟩ [bold green1]PAID
-[bold green1]TODAY DATE[medium_purple1]  ⟩ [bold green1]{ll}
-[bold green1]IP COUNTRY[medium_purple1]  ⟩ [bold green1]{kk}"""
-
-    # Print Banner
-    print(
-        Panel(
-            logo,
-            subtitle="[bold red]● [bright_yellow]● [green1]●",
-            subtitle_align="left",
-            title="[bold red]● [bright_yellow]● [green1]●",
-            title_align="right",
-            width=102,
-            padding=0,
-            style="bold magenta2"
-        )
-    )
-
-    print(Panel(hx, width=100, padding=0, style="bold blue"))
+hx=(f"""[bold cyan]⚡ [bold green]Tool[/]: [bright_magenta]SpamShare[/]
+[bold cyan]⚡ [bold green]Version[/]: [bright_yellow]1.0.0[/]
+[bold cyan]⚡ [bold green]Dev[/]: [italic green]Theo Devcode[/]
+[bold cyan]⚡ [bold green]Status[/]: [bold green]ACTIVE[/]
+""")""")
+def banner():
+    os.system("clear")
+    print(Panel(logo,subtitle="[bold red]● [bright_yellow]● [green1]●",subtitle_align='left',title="[bold red]● [bright_yellow]● [green1]●",title_align='right',width=102,padding=0,style=f"bold magenta2"))
+    print(Panel(hx,width=100,padding=0,style="bold magenta2"))
 
 def bryxcreate():
 	banner()
@@ -696,7 +685,6 @@ def bryxcreate():
 		print(Panel('[bold red]OPTION NOT FOUND IN MENU',subtitle="[bold red]● [bright_yellow]● [green1]●",subtitle_align='left',title="[bold red]● [bright_yellow]● [green1]●",title_align='right',width=102,padding=0,style="bold magenta2"))
 		time.sleep(1)
 		bryxcreate()
-
 
 Ok,Cp=0,0
 
