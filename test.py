@@ -717,7 +717,7 @@ def main() -> None:
         firstname,lastname = fake_name()
         print(Panel(f"[bold white] Email : [bold green1]{email2}",style="bold cyan"))
         dn()
-	print(Panel(f"[bold white] Full Name  : {firstname} {lastname}",style="bold cyan"))
+	print(Panel(f"[bold white] Full Name  : {firstname}\n{lastname}",style="bold cyan"))
         dn()
         print(Panel(f"[bold white] Password : {passw}",style="bold cyan"))
         dn()
