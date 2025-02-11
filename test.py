@@ -739,7 +739,7 @@ def main() -> None:
             'field_names[1]': "birthday_wrapper",
             'birthday_day': str(random.randint(1,28)),
             'birthday_month': str(random.randint(1,12)),
-            'birthday_year': str(random.randint(1992,2009)),
+            'birthday_year': str(random.randint(1992,2000)),
             'age_step_input': "",
             'did_use_age': "false",
             'field_names[2]': "reg_email__",
