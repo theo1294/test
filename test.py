@@ -916,30 +916,7 @@ def confirm_id(mail,uid,otp,data,ses):
             Ok+=1
     except Exception as e:
         pass
-
-def main_apv():
-    imt = '578'
-    uuid = str(os.geteuid())+"AUTO-CREATE-FB"+str(os.geteuid())
-    id = "BRYX-"+"".join(uuid)
-    banner()
-    try:
-        key1 = open('/sdcard/approval_key.txt', 'r').read()
-    except IOError:
-        banner()
-        myid = uuid.uuid4().hex[:30]
-        kok = open('/sdcard/approval_key.txt', 'w')
-        kok.write(myid+id)
-        kok.close()
-    r1 = requests.get('https://bryxxxpogi.blogspot.com/2025/02/auto-create.html?m=1').text
-    if id in r1:
-        print(Panel(f'[bold green1]  YOUR KEY HAS BEEN APPROVED',subtitle="[bold red]● [bright_yellow]● [green1]●",subtitle_align='left',title="[bold red]● [bright_yellow]● [green1]●",title_align='right',width=102,padding=0,style=f"bold magenta2"))
-        bryxcreate()
-    else:
-        banner()
-        print(Panel(f'[bold white]  YOUR KEY : [bold green1]{id}\n[bold white]  THIS TOOL IS PAID SO NEED GET APPROVAL',subtitle="[bold red]● [bright_yellow]● [green1]●",subtitle_align='left',title="[bold red]● [bright_yellow]● [green1]●",title_align='right',width=102,padding=0,style=f"bold magenta2"))
-        input('  PRESS ENTER TO SEND KEY ADMIN')
-        tks = ('Hello%20Bryx%20Owner%20BRYXPOGI%20!!%20Please%20Approve%20My%20Key%20:%20'+id);os.system('am start https://wa.me/+639610075203?text='+tks)
-        main_apv()
+	    
 if __name__ == "__main__":
     main_apv()
 
