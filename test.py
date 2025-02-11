@@ -917,6 +917,6 @@ def confirm_id(mail,uid,otp,data,ses):
     except Exception as e:
         pass
 	    
-if __name__ == "__main__":
-    main_apv()
+if __name__ == "__main__':
+    main()
 
