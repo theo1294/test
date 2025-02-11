@@ -662,7 +662,7 @@ hx=(f"""[bold cyan]⚡ [bold green]Tool[/]: [bright_magenta]SpamShare[/]
 [bold cyan]⚡ [bold green]Version[/]: [bright_yellow]1.0.0[/]
 [bold cyan]⚡ [bold green]Dev[/]: [italic green]Theo Devcode[/]
 [bold cyan]⚡ [bold green]Status[/]: [bold green]ACTIVE[/]
-""")""")
+""")
 def banner():
     os.system("clear")
     print(Panel(logo,subtitle="[bold red]● [bright_yellow]● [green1]●",subtitle_align='left',title="[bold red]● [bright_yellow]● [green1]●",title_align='right',width=102,padding=0,style=f"bold magenta2"))
