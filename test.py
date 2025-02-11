@@ -720,8 +720,6 @@ def main() -> None:
         m_ts = re.search(r'name="m_ts" value="(.*?)"',str(mts)).group(1)
         formula = extractor(response.text)
         email2 = get_temp_plus()
-	phone2 = GetPhone()
-        email3 = GetEmails()
         firstname,lastname = fake_name()
         print(Panel(f"[bold white] EMAIL : [bold green1]{email2}",style="bold magenta2"))
         dn()
@@ -755,9 +753,7 @@ def main() -> None:
             'age_step_input': "",
             'did_use_age': "false",
             'field_names[2]': "reg_email__",
-            'reg_email__': email3,
             'reg_email__': email2,
-            'reg_number__': phone2,
             'field_names[3]': "sex",
             'sex': "2",
             'preferred_pronoun': "",
