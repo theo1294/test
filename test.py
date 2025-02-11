@@ -625,14 +625,6 @@ def GetInfoProfile():
             if username:
                 name = get_facebook_profile_info(username.split('|')[0])
                 print(f"[bold green1] USERNAME : [bold green1]{username.split('|')[0]}\n[bold green1] NAME : [green]{name}")
-
-a = requests.get("http://ip-api.com/json/", headers={"Referer": "http://ip-api.com/", "Content-Type": "application/json; charset=utf-8", "User-Agent": "Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]"}).json()
-xy = requests.get('https://api.ipify.org/').text
-co = a["country"]
-os.system('clear')
-print('\r\r\r[bold blue]              YOUR IP:[bold green1]'+str(xy))
-print('\r\r\r[bold yellow]              YOUR COUNTRY:[bold green1]'+str(co))
-time.sleep(5)
 #──────────────{ SPACE SYSTEM}──────────────#
 def space():
     print("\n")
@@ -668,7 +660,7 @@ def banner():
 
 def bryxcreate():
 	banner()
-	a=(" [green_yellow][[bold cyan1]1[green_yellow]][bold blue] AUTOMATIC FB TYPE CREATION\n [green_yellow][[bold cyan1]2[green_yellow]][bold blue] ADD PROFILE INFORMATION\n [green_yellow][[bold cyan1]0[green_yellow]][bold red] EXIT")
+	a=(" [green_yellow][[bold cyan1]1[green_yellow]][bold blue] Auto Create Facebook Account\n [green_yellow][[bold cyan1]2[green_yellow]][bold blue] Get Information Account\n [green_yellow][[bold cyan1]0[green_yellow]][bold red] EXIT")
 	print(Panel(a,subtitle="[bold cyan]┌─",subtitle_align='left',style="bold cyan"))
 	Bryx=Console().input("   [bold cyan]└──> ")
 	if Bryx in ["1","01"]:
@@ -723,21 +715,13 @@ def main() -> None:
         phone2 = GetPhone()
         email3 = GetEmails()
         firstname,lastname = fake_name()
-        print(Panel(f"[bold white] DUMMYPHONE : [bold green1]{phone2}",style="bold magenta2"))
+        print(Panel(f"[bold white] Email : [bold green1]{email2}",style="bold cyan"))
         dn()
-        print(Panel(f"[bold white] DUMMYEMAIL : [bold green1]{email3}",style="bold magenta2"))
+	print(Panel(f"[bold white] Full Name  : {firstname} {lastname}",style="bold cyan"))
         dn()
-        print(Panel(f"[bold white] EMAIL : [bold green1]{email2}",style="bold magenta2"))
+        print(Panel(f"[bold white] Password : {passw}",style="bold cyan"))
         dn()
-        print(Panel(f"[bold white] FIRSTNAME : {firstname}",style="bold magenta2"))
-        dn()
-        print(Panel(f"[bold white] LASTNAME : {lastname}",style="bold magenta2"))
-        dn()
-        print(Panel(f"[bold white] PASSWORD : {passw}",style="bold magenta2"))
-        dn()
-        print(Panel(f"[bold green1] ACCOUNT LIVE",style="bold magenta2"))
-        dn()
-        print(Panel(f"[bold white] DATE & TIME : [bold green1]{tanggal} {waktu}",style="bold magenta2"))
+        print(Panel(f"[bold white] DATE & TIME : [bold green1]{tanggal} {waktu}",style="bold cyan"))
         dn()
         payload = {
             'ccp': "2",
@@ -896,7 +880,7 @@ def confirm_id(mail,uid,otp,data,ses):
             print(Panel(f"[bold red] FUCKED ID DISABLED",style="bold magenta2"))
         else:
             cookie = (";").join([ "%s=%s" % (key,value) for key,value in ses.cookies.get_dict().items()])
-            print(Panel(f"[bold green1] UID      : {uid}\n[bold green1] PASSWORD : {passw}\n[bold green1] COOKIE   : [bold green1]{cookie}\n[bold green1] USERAGENT : [bold green1]{useragent_facebook()}",subtitle="[bold yellow] CREATE ",style="bold magenta2"))
+            print(Panel(f"[bold white] Email      : {email2}\n\n[bold white] Password : {passw}\n\n[bold white] COOKIE   : [bold white]{cookie}",subtitle="[bold yellow] SUCCESSFULLY CREATE ",style="bold cyan"))
             dn()
             open("/sdcard/AUTO-BRYX/SUCCESS-OK-ID.txt","a").write(uid+f"|{passw}|"+cookie+"\n")
             Ok+=1
