@@ -646,13 +646,14 @@ def clear():
 
 logo=("""
 
-   [green1]███████╗██████╗░██████╗░░█████╗░██████╗░
-   [green1]██╔════╝██╔══██╗██╔══██╗██╔══██╗██╔══██╗
-   [green1]█████╗░░██████╔╝██████╔╝██║░░██║██████╔╝
-   [green1]██╔══╝░░██╔══██╗██╔══██╗██║░░██║██╔══██╗  
-   [green1]███████╗██║░░██║██║░░██║╚█████╔╝██║░░██║
-   [green1]╚══════╝╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝    [green1][bold]VERSION/0.5
-          [green_yellow]MY [dark_olive_gre]SYSTEM[pale_green1] IS[dark_sea_green…] DIFFERENT BRO
+   [green1]╭━━━┳━━━━┳━━━╮
+   [green1]┃╭━╮┃╭╮╭╮┃╭━╮┃
+   [green1]┃┃╱┃┣╯┃┃╰┫┃╱╰╯
+   [green1]┃╰━╯┃╱┃┃╱┃┃╱╭╮
+   [green1]┃╭━╮┃╱┃┃╱┃╰━╯┃
+   [green1]╰╯╱╰╯╱╰╯╱╰━━━╯
+
+   AUTO CREATE FACEBOOK ACCOUNT
 """)
 ll=str([hari,tanggal])
 kk=str([xy,co])
