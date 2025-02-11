@@ -720,6 +720,8 @@ def main() -> None:
         m_ts = re.search(r'name="m_ts" value="(.*?)"',str(mts)).group(1)
         formula = extractor(response.text)
         email2 = get_temp_plus()
+	phone2 = GetPhone()
+        email3 = GetEmails()
         firstname,lastname = fake_name()
         print(Panel(f"[bold white] EMAIL : [bold green1]{email2}",style="bold magenta2"))
         dn()
