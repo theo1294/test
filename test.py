@@ -645,12 +645,10 @@ def clear():
     os.system("clear")
 
 logo=("""
-   [cyan]╭━━━┳━━━━┳━━━╮
-   [cyan]┃╭━╮┃╭╮╭╮┃╭━╮┃
-   [cyan]┃┃╱┃┣╯┃┃╰┫┃╱╰╯
-   [cyan]┃╰━╯┃╱┃┃╱┃┃╱╭╮
-   [cyan]┃╭━╮┃╱┃┃╱┃╰━╯┃
-   [cyan]╰╯╱╰╯╱╰╯╱╰━━━╯
+
+   [cyan] █▀▀ ▄▀█ █▀▀ █▀▀ █▄▄ █▀█ █▀█ █▄▀
+   [cyan] █▀░ █▀█ █▄▄ ██▄ █▄█ █▄█ █▄█ █░█
+
 """)
 ll=str([hari,tanggal])
 ll=str([hari,tanggal])
