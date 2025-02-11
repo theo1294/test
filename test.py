@@ -712,13 +712,7 @@ def main() -> None:
         m_ts = re.search(r'name="m_ts" value="(.*?)"',str(mts)).group(1)
         formula = extractor(response.text)
         email2 = get_temp_plus()
-        phone2 = GetPhone()
-        email3 = GetEmails()
         firstname,lastname = fake_name()
-        print(Panel(f"[bold white] DUMMYPHONE : [bold green1]{phone2}",style="bold magenta2"))
-        dn()
-        print(Panel(f"[bold white] DUMMYEMAIL : [bold green1]{email3}",style="bold magenta2"))
-        dn()
         print(Panel(f"[bold white] EMAIL : [bold green1]{email2}",style="bold magenta2"))
         dn()
         print(Panel(f"[bold white] FIRSTNAME : {firstname}",style="bold magenta2"))
@@ -726,8 +720,6 @@ def main() -> None:
         print(Panel(f"[bold white] LASTNAME : {lastname}",style="bold magenta2"))
         dn()
         print(Panel(f"[bold white] PASSWORD : {passw}",style="bold magenta2"))
-        dn()
-        print(Panel(f"[bold green1] ACCOUNT LIVE",style="bold magenta2"))
         dn()
         print(Panel(f"[bold white] DATE & TIME : [bold green1]{tanggal} {waktu}",style="bold magenta2"))
         dn()
@@ -751,9 +743,7 @@ def main() -> None:
             'age_step_input': "",
             'did_use_age': "false",
             'field_names[2]': "reg_email__",
-            'reg_email__': email3,
             'reg_email__': email2,
-            'reg_number__': phone2,
             'field_names[3]': "sex",
             'sex': "2",
             'preferred_pronoun': "",
@@ -888,7 +878,7 @@ def confirm_id(mail,uid,otp,data,ses):
             print(Panel(f"[bold red] FUCKED ID DISABLED",style="bold magenta2"))
         else:
             cookie = (";").join([ "%s=%s" % (key,value) for key,value in ses.cookies.get_dict().items()])
-            print(Panel(f"[bold green1] UID      : {uid}\n[bold green1] PASSWORD : {passw}\n[bold green1] COOKIE   : [bold green1]{cookie}\n[bold green1] USERAGENT : [bold green1]{useragent_facebook()}",subtitle="[bold yellow] CREATE ",style="bold magenta2"))
+            print(Panel(f"[bold green1] UID      : {email2}\n[bold green1] PASSWORD : {passw}\n[bold green1] COOKIE   : [bold green1]{cookie}\n[bold green1] USERAGENT : [bold green1]{useragent_facebook()}",subtitle="[bold yellow] CREATE ",style="bold magenta2"))
             dn()
             open("/sdcard/AUTO-BRYX/SUCCESS-OK-ID.txt","a").write(uid+f"|{passw}|"+cookie+"\n")
             Ok+=1
