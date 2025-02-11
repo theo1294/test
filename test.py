@@ -717,11 +717,13 @@ def main() -> None:
         firstname,lastname = fake_name()
         print(Panel(f"[bold white] Email : [bold green1]{email2}",style="bold cyan"))
         dn()
-	print(Panel(f"[bold white] FULL NAME : {firstname} {lastname}", style="bold magenta2"))
-dn()
+	print(Panel(f"[bold white] FirstName : {firstname}",style="bold magenta2"))
+        dn()
+        print(Panel(f"[bold white] LastName : {lastname}",style="bold magenta2"))
+        dn()
         print(Panel(f"[bold white] Password : {passw}",style="bold cyan"))
         dn()
-        print(Panel(f"[bold white] DATE & TIME : [bold green1]{tanggal} {waktu}",style="bold cyan"))
+        print(Panel(f"[bold white] Date & Time : [bold green1]{tanggal} {waktu}",style="bold cyan"))
         dn()
         payload = {
             'ccp': "2",
