@@ -647,7 +647,6 @@ logo=("""
 """)
 ll=str([hari,tanggal])
 ll=str([hari,tanggal])
-kk=str([co])
 hx=(f"""
 [bold cyan] ⚡ [bold green]Tool[/]: [bright_magenta]Auto Facebook Create Account[/]
 [bold cyan] ⚡ [bold green]Version[/]: [bright_yellow]1.0.0[/]
