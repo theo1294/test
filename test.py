@@ -645,12 +645,12 @@ def clear():
     os.system("clear")
 
 logo=("""
-[cyan]       ╔═══╦══╗╔═╗╔═╗╔════╗────╔╗
-[cyan]       ║╔══╣╔╗║╚╗╚╝╔╝║╔╗╔╗║────║║
-[cyan]       ║╚══╣╚╝╚╗╚╗╔╝─╚╝║║╠╩═╦══╣║╔══╗
-[cyan]       ║╔══╣╔═╗║╔╝╚╗───║║║╔╗║╔╗║║║══╣
-[cyan]       ║║──║╚═╝╠╝╔╗╚╗──║║║╚╝║╚╝║╚╬══║
-[cyan]       ╚╝──╚═══╩═╝╚═╝──╚╝╚══╩══╩═╩══╝
+[cyan]         ╔═══╦══╗╔═╗╔═╗╔════╗────╔╗
+[cyan]         ║╔══╣╔╗║╚╗╚╝╔╝║╔╗╔╗║────║║
+[cyan]         ║╚══╣╚╝╚╗╚╗╔╝─╚╝║║╠╩═╦══╣║╔══╗
+[cyan]         ║╔══╣╔═╗║╔╝╚╗───║║║╔╗║╔╗║║║══╣
+[cyan]         ║║──║╚═╝╠╝╔╗╚╗──║║║╚╝║╚╝║╚╬══║
+[cyan]         ╚╝──╚═══╩═╝╚═╝──╚╝╚══╩══╩═╩══╝
 """)
 ll=str([hari,tanggal])
 ll=str([hari,tanggal])
@@ -663,8 +663,8 @@ hx=(f"""
 """)
 def banner():
     os.system("clear")
-    print(Panel(logo,subtitle="[bold red]● [bright_yellow]● [green1]●",subtitle_align='left',title="[bold red]● [bright_yellow]● [green1]●",title_align='right',width=102,padding=0,style=f"bold magenta2"))
-    print(Panel(hx,width=60,padding=0,style="bold blue"))
+    print(Panel(logo,subtitle="[bold red]● [bright_yellow]● [green1]●",subtitle_align='left',title="[bold red]● [bright_yellow]● [green1]●",title_align='right',width=102,padding=0,style=f"bold cyan"))
+    print(Panel(hx,width=60,padding=0,style="bold cyan"))
 
 def bryxcreate():
 	banner()
