@@ -625,14 +625,6 @@ def GetInfoProfile():
             if username:
                 name = get_facebook_profile_info(username.split('|')[0])
                 print(f"[bold green1] USERNAME : [bold green1]{username.split('|')[0]}\n[bold green1] NAME : [green]{name}")
-
-a = requests.get("http://ip-api.com/json/", headers={"Referer": "http://ip-api.com/", "Content-Type": "application/json; charset=utf-8", "User-Agent": "Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]"}).json()
-xy = requests.get('https://api.ipify.org/').text
-co = a["country"]
-os.system('clear')
-print('\r\r\r[bold blue]              YOUR IP:[bold green1]'+str(xy))
-print('\r\r\r[bold yellow]              YOUR COUNTRY:[bold green1]'+str(co))
-time.sleep(5)
 #──────────────{ SPACE SYSTEM}──────────────#
 def space():
     print("\n")
@@ -688,7 +680,7 @@ Ok,Cp=0,0
 
 def progres(current,num_accounts,delay):
 		for sleep in range(int(delay), 0, -1):
-			print(f'[bold magenta1]BRYX [bold white][[bold cyan]{current}[bold white]/[bold red]{num_accounts}[bold white]] SUCCESS-:[bold green1]{Ok}\r',end='\r')
+			print(f'[bold white]THEO [bold white][[bold cyan]{current}[bold white]/[bold red]{num_accounts}[bold white]] SUCCESS-:[bold green1]{Ok}\r',end='\r')
 			time.sleep(1)
 			if current == num_accounts:
 				break
@@ -699,11 +691,11 @@ def results():
 def main() -> None:
     uid=None
     global Ok,Cp,passw,num_accounts,delay
-    num_accounts = int(input("\033[1;37mHOW MANY ACC : "))
-    delay = int(input("\033[1;37mDELAY TIME BETWEEN REQUESTS : "))
+    num_accounts = int(input("\033[1;37mHow many account create? : "))
+    delay = int(input("\033[1;37mInterval for the process : "))
     banner()
-    a=(" [green_yellow][[bold cyan1]1[green_yellow]][bold green1] DEFAULT PASSWORD\n [green_yellow][[bold cyan1]2[green_yellow]][bold green1] CUSTOM PASSWORD")
-    print(Panel(a,subtitle="[bold magenta2]┌─",subtitle_align='left',style="bold magenta2"))
+    a=(" [green_yellow][[bold cyan1]1[green_yellow]][bold green1] Random Password\n [green_yellow][[bold cyan1]2[green_yellow]][bold green1] Custom Password")
+    print(Panel(a,subtitle="[bold magenta2]┌─",subtitle_align='left',style="bold cyan"))
     Bryx=Console().input("   [bold magenta2]└──> ")
     if Bryx in ["1","01"]:
     	passw=fake_password()
@@ -721,17 +713,15 @@ def main() -> None:
         formula = extractor(response.text)
         email2 = get_temp_plus()
         firstname,lastname = fake_name()
-        print(Panel(f"[bold white] EMAIL : [bold green1]{email2}",style="bold magenta2"))
+        print(Panel(f"[bold white] FirstName : {firstname}",style="bold cyan"))
         dn()
-        print(Panel(f"[bold white] FIRSTNAME : {firstname}",style="bold magenta2"))
+        print(Panel(f"[bold white] LastName : {lastname}",style="bold cyan"))
         dn()
-        print(Panel(f"[bold white] LASTNAME : {lastname}",style="bold magenta2"))
+	print(Panel(f"[bold white] Email : [bold green1]{email2}",style="bold cyan"))
         dn()
-        print(Panel(f"[bold white] PASSWORD : {passw}",style="bold magenta2"))
+        print(Panel(f"[bold white] Password : {passw}",style="bold cyan"))
         dn()
-        print(Panel(f"[bold green1] ACCOUNT LIVE",style="bold magenta2"))
-        dn()
-        print(Panel(f"[bold white] DATE & TIME : [bold green1]{tanggal} {waktu}",style="bold magenta2"))
+        print(Panel(f"[bold white] Date & Time : [bold green1]{tanggal} {waktu}",style="bold magenta2"))
         dn()
         payload = {
             'ccp': "2",
@@ -833,7 +823,7 @@ def main() -> None:
             con_sub = ses.get('https://x.facebook.com/confirmemail.php', params=params, headers=header2).text
             valid = get_code_temp_plus(email2)
             if valid:
-                print(Panel(f"[bold white] OTP SENT TO MAIL",style="bold magenta2"))
+                print(Panel(f"[bold white] OTP SENT TO YOUR EMAIL",style="bold magenta2"))
                 confirm_id(email2,uid,valid,con_sub,ses)
             else:
                 #print(Panel(f"[bold red] DISABLED ID",style="bold magenta2"))
@@ -888,7 +878,7 @@ def confirm_id(mail,uid,otp,data,ses):
             print(Panel(f"[bold red] FUCKED ID DISABLED",style="bold magenta2"))
         else:
             cookie = (";").join([ "%s=%s" % (key,value) for key,value in ses.cookies.get_dict().items()])
-            print(Panel(f"[bold green1] UID      : {firstname}\n[bold cyan] PASSWORD : {passw}\n[bold cysn] COOKIE   : [bold cyan]{cookie}\n",subtitle="[bold yellow] CREATE ",style="bold magenta2"))
+            print(Panel(f"[bold green1] UID      : {uid}\n[bold cyan] PASSWORD : {passw}\n[bold cysn] COOKIE   : [bold cyan]{cookie}\n",subtitle="[bold yellow] CREATE ",style="bold magenta2"))
             dn()
             open("/sdcard/AUTO-BRYX/SUCCESS-OK-ID.txt","a").write(uid+f"|{passw}|"+cookie+"\n")
             Ok+=1
@@ -898,4 +888,3 @@ def confirm_id(mail,uid,otp,data,ses):
 
 if __name__ == "__main__":
     bryxcreate()
-
