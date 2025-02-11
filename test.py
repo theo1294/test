@@ -645,14 +645,12 @@ def clear():
     os.system("clear")
 
 logo=("""
-
-[cyan] ╔═══╦══╗╔═╗╔═╗╔════╗────╔╗
-[cyan] ║╔══╣╔╗║╚╗╚╝╔╝║╔╗╔╗║────║║
-[cyan] ║╚══╣╚╝╚╗╚╗╔╝─╚╝║║╠╩═╦══╣║╔══╗
-[cyan] ║╔══╣╔═╗║╔╝╚╗───║║║╔╗║╔╗║║║══╣
-[cyan] ║║──║╚═╝╠╝╔╗╚╗──║║║╚╝║╚╝║╚╬══║
-[cyan] ╚╝──╚═══╩═╝╚═╝──╚╝╚══╩══╩═╩══╝
-
+[cyan]       ╔═══╦══╗╔═╗╔═╗╔════╗────╔╗
+[cyan]       ║╔══╣╔╗║╚╗╚╝╔╝║╔╗╔╗║────║║
+[cyan]       ║╚══╣╚╝╚╗╚╗╔╝─╚╝║║╠╩═╦══╣║╔══╗
+[cyan]       ║╔══╣╔═╗║╔╝╚╗───║║║╔╗║╔╗║║║══╣
+[cyan]       ║║──║╚═╝╠╝╔╗╚╗──║║║╚╝║╚╝║╚╬══║
+[cyan]       ╚╝──╚═══╩═╝╚═╝──╚╝╚══╩══╩═╩══╝
 """)
 ll=str([hari,tanggal])
 ll=str([hari,tanggal])
@@ -670,9 +668,9 @@ def banner():
 
 def bryxcreate():
 	banner()
-	a=(" [green_yellow][[bold cyan1]1[green_yellow]][bold green1] AUTOMATIC FB TYPE CREATION\n [green_yellow][[bold cyan1]2[green_yellow]][bold green1] ADD PROFILE INFORMATION\n [green_yellow][[bold cyan1]0[green_yellow]][bold red] EXIT")
-	print(Panel(a,subtitle="[bold magenta2]┌─",subtitle_align='left',style="bold magenta2"))
-	Bryx=Console().input("   [bold magenta2]└──> ")
+	a=(" [green_yellow][[bold cyan1]1[green_yellow]][bold blue] AUTOMATIC FB TYPE CREATION\n [green_yellow][[bold cyan1]2[green_yellow]][bold blue] ADD PROFILE INFORMATION\n [green_yellow][[bold cyan1]0[green_yellow]][bold red] EXIT")
+	print(Panel(a,subtitle="[bold cyan]┌─",subtitle_align='left',style="bold cyan"))
+	Bryx=Console().input("   [bold cyan]└──> ")
 	if Bryx in ["1","01"]:
 		main()
 	elif Bryx in ["2","02"]:
