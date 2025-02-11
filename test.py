@@ -658,15 +658,16 @@ logo=("""
 ll=str([hari,tanggal])
 ll=str([hari,tanggal])
 kk=str([xy,co])
-hx=(f"""[bold cyan]⚡ [bold green]Tool[/]: [bright_magenta]SpamShare[/]
-[bold cyan]⚡ [bold green]Version[/]: [bright_yellow]1.0.0[/]
-[bold cyan]⚡ [bold green]Dev[/]: [italic green]Theo Devcode[/]
-[bold cyan]⚡ [bold green]Status[/]: [bold green]ACTIVE[/]
+hx=(f"""
+[bold cyan] ⚡ [bold green]Tool[/]: [bright_magenta]Auto Facebook Create Account[/]
+[bold cyan] ⚡ [bold green]Version[/]: [bright_yellow]1.0.0[/]
+[bold cyan] ⚡ [bold green]Dev[/]: [italic green]Theo Devcode[/]
+[bold cyan] ⚡ [bold green]Status[/]: [bold green]PREMIUM[/]
 """)
 def banner():
     os.system("clear")
     print(Panel(logo,subtitle="[bold red]● [bright_yellow]● [green1]●",subtitle_align='left',title="[bold red]● [bright_yellow]● [green1]●",title_align='right',width=102,padding=0,style=f"bold magenta2"))
-    print(Panel(hx,width=100,padding=0,style="bold magenta2"))
+    print(Panel(hx,width=100,padding=0,style="bold blue"))
 
 def bryxcreate():
 	banner()
