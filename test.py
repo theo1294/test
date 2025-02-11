@@ -646,12 +646,12 @@ def clear():
 
 logo=("""
 
-   [green1]╭━━━┳━━━━┳━━━╮
-   [green1]┃╭━╮┃╭╮╭╮┃╭━╮┃
-   [green1]┃┃╱┃┣╯┃┃╰┫┃╱╰╯
-   [green1]┃╰━╯┃╱┃┃╱┃┃╱╭╮
-   [green1]┃╭━╮┃╱┃┃╱┃╰━╯┃
-   [green1]╰╯╱╰╯╱╰╯╱╰━━━╯
+   [cyan]╭━━━┳━━━━┳━━━╮
+   [cyan]┃╭━╮┃╭╮╭╮┃╭━╮┃
+   [cyan]┃┃╱┃┣╯┃┃╰┫┃╱╰╯
+   [cyan]┃╰━╯┃╱┃┃╱┃┃╱╭╮
+   [cyan]┃╭━╮┃╱┃┃╱┃╰━╯┃
+   [cyan]╰╯╱╰╯╱╰╯╱╰━━━╯
 
    AUTO CREATE FACEBOOK ACCOUNT
 """)
@@ -665,7 +665,7 @@ hx=(f"""  [bold green1]DEVELOPER[medium_purple1]   ⟩ [bold green1]BRYXPOGI
 def banner():
     os.system("clear")
     print(Panel(logo,subtitle="[bold red]● [bright_yellow]● [green1]●",subtitle_align='left',title="[bold red]● [bright_yellow]● [green1]●",title_align='right',width=102,padding=0,style=f"bold magenta2"))
-    print(Panel(hx,width=100,padding=0,style="bold magenta2"))
+    print(Panel(hx,width=100,padding=0,style="bold blue"))
 
 def bryxcreate():
 	banner()
