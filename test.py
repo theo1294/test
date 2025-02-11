@@ -919,5 +919,5 @@ def confirm_id(mail,uid,otp,data,ses):
 
 
 if __name__ == "__main__":
-    main_apv()
+    bryxcreate()
 
